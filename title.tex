@@ -1,0 +1,60 @@
+\begin{titlepage}
+  	\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+	\center
+	\textsc{\LARGE Saxion University of Applied Sciences}\\[1.5cm]
+	\textsc{\Large International Water Technology}\\[0.5cm]
+	\textsc{\large Applied Computer Science Graduation Project}\\[0.5cm]
+	\HRule\\[0.4cm]
+	{\huge\bfseries \@title}\\[0.4cm]
+	\HRule\\[1.5cm]
+
+	%Author(s)
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Author(s)}\\
+			\@author % Your name
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{Supervisor(s)}\\
+			\supervisors % Supervisor's name
+		\end{flushright}
+	\end{minipage}
+	
+% 	If you don't want a supervisor, uncomment the two lines below and comment the code above
+% 	{\large\textit{Author(s)}}\\
+% 	\@author % Your name
+
+	%Date
+	\vfill\vfill
+		{\large\today}
+    \vfill\vfill
+    
+    \footnotesize{Time period: \timePeriod}
+    \\[0.3cm]
+    \footnotesize{Resources planned: \resourcesPlanned}
+    \vfill
+    \homepage
+    
+    \vfill
+    
+    %------------------------------------------------
+    % Change log for the plan (can be deleted before delivery)
+    % When you update the plan please record what you changed and what the reason for the change. This will be useful for your supervisor.
+    %------------------------------------------------
+    \input{./changelog.tex}
+	
+	%------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+	\vfill\vfill
+	\includegraphics[width=0.4\textwidth]{./saxionlogo.png}
+	\vfill
+	 
+	\vfill
+	
+\end{titlepage}
