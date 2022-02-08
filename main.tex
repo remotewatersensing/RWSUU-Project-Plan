@@ -75,10 +75,10 @@ Multiple prototypes will be realized within the given time and budget. Mounting 
 
 During this sprint, no new reports will be written. Whenever there is an issue with a design, the design report can be edited. A change log as well as git will keep track of these edits.
 
-\subsection{Research}
+\subsection{Research} \label{sprint:research}
 From each of these prototypes, several quantitative and qualitative features will be tested. These features include accuracy, speed, and cost. The summary of this descriptive, non-probabilistic research is written down in the final research report.
 
-\subsection{Professionalise}
+\subsection{Professionalise} \label{sprint:professionalise}
 If there is time left, the most compelling prototype will be refined to a minimum viable product (MVP). \cite{mvp} This minimum viable product can be derived from one prototype or mixed together from multiple prototypes. The process will be similar to the realize sprint \ref{sprint:realise}, with the final design being added in the design report.
 
 \section{Project Boundaries} \label{projectboundaries}
@@ -89,7 +89,7 @@ The project will take place from the beginning of February 2022 until the end of
 \subsection{Must Have}
 \begin{itemize}
   \item The project must deliver one working prototype.
-  \item The project must deliver every report described in project activities (\ref{projectactivities}).
+  \item The project must deliver every report described in project activities (\ref{interimresults}).
   \item The project must receive adequate funding as described in costs and benefits (\ref{costsandbenefits}).
   \item There must be accommodations to be able to test out the prototypes in the correct conditions.
 \end{itemize}
@@ -110,9 +110,50 @@ The project will take place from the beginning of February 2022 until the end of
   \item The research report will not make claims about measurement performance outside of Vietnam
 \end{itemize}
 
-\section{Interim Results}
+\section{Interim Results}\label{interimresults}
+At the end of each sprint there will be intermediate results, these are listed as follows:
+\begin{itemize}
+  \item Preliminary research report (see \ref{sprint:analyze})
+  \item Design report (see \ref{sprint:design})
+  \item Prototype(s) (see \ref{sprint:realise})
+  \item Final research report (see \ref{sprint:research})
+  \item Minimum viable product (see \ref{sprint:professionalise})
+\end{itemize}
 
 \section{Quality}
+To guarantee the quality of the interim results, certain measures are taken. In this section, these methods to guarantee quality are thoroughly described.
+
+\subsection{Version Control Software}
+As mentioned in the analyze sprint (\ref{sprint:analyze}) the project will make use of the git version control system for it's software and reports. The main advantage of using a version control system are that multiple people can easily collaborate on a project. A VCS also stores the history of changes, making rollbacks possible. It also acts as a cloud backup.
+
+For hosting the git repositories, the project will make use of GitHub \cite{gh} because of it's ability to create organizations with multiple git repositories. The GitHub organization for this project is available at https://github.com/remotewatersensing
+
+\subsection{Project Management Software}
+As the project is already making use of GitHub for version control, it makes sense to also use GitHub for other purposes. As mentioned in the project activities \ref{projectactivities}, the project will make use of kanban-style boards. These kanban-style boards are online available in GitHub as "projects" \cite{ghprojects}, and will be used to keep track of progress during sprints.
+
+\subsection{Diagram Software}
+To draw flowcharts, UML, and other diagrams, the online service diagrams.net \cite{diagrams} is used. The benefit of working with diagrams.net is that it can run on any operating system as long as it has a modern web browser. The project will use it's online storage options to seamlessly upload the diagrams to github.
+
+\subsection{Word Processing Software}
+To write the several reports that need to be delivered, \LaTeX will be used \cite{latex}. \LaTeX is a software system for document preparation widely used in academia. It allows the user to write plain text along with some commands for typesetting in order to produce maintainable documents. An advantage of \LaTeX as opposed to the more widely used word processing applications is that the user generally has more control over the document. \LaTeX also allows for seamless citations and cross-referencing.
+
+Overleaf \cite{overleaf}, a popular online \LaTeX editor, is used to write, edit, and publish the documents. The project will be using Overleaf's integration with GitHub to publish the documents as git repositories.
+
+\subsection{Integrated Development Environment}
+To write the embedded software used to control the drone and the sensors, Jetbrains' CLion \cite{clion} is used. CLion is an advanced IDE for C/C++ with code assistance, syntax checks, and code generation, improving development speed over standard text editors.
+
+\subsection{Code Quality}
+Code Quality refers to how written software meets non-functional requirements that support the delivery of the functional requirements, such as robustness or maintainability. 
+
+To find common vulnerabilities on all of the project's software repositories, a vulnerability analysis engine called CodeQL is used. An automation \cite{codeql} runs GitHub's CodeQL, against the repository's source code to find security vulnerabilities. It then automatically uploads the results to GitHub so they can be displayed in the repository's security tab. The software maintainer will be automatically alerted whenever there is a serious security issue.
+
+As most of the software is going to be written in embedded C/C++, the latest MISRA  software development guidelines \cite{misra} are applied. CLion, the IDE used, has checks built-in to guarantee MISRA compliance. \cite{clion:misra}
+
+\subsection{Testing}
+As mentioned in the research sprint (\ref{sprint:research}), a descriptive, non-probabilistic research report will be written to assess the performance of the prototypes. Sensor performance will be properly tested against existing methods of measurements.
+
+\subsection{Feedback}
+In order to guarantee an end product that comes close to the wishes of the sponsor, all of the interim results (\ref{interimresults}) will contain regular feedback rounds. External expert advice will also be regularly requested.
 
 \section{Project Organization}
 
