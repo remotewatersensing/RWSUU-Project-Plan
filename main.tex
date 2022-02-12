@@ -75,8 +75,6 @@ Water quality refers to the chemical, physical, and biological characteristics o
 \subsubsection{In remote areas}
 It can be concluded that certain sensoring strategies are effective in different climates and landscape. This project will focus on water sensoring specifically in areas where PERNAM JSC are active. These areas will be defined during the analyze sprint (\ref{sprint:analyze}). The end results may also be applicable in other countries however, such as Indonesia.
 
-
-
 \section{Project Activities} \label{projectactivities}
 The project will consist of several sprints. These sprints will have time boxed periods, and usually last two to four weeks. Sprints can intertwine with each other if necessary. Each sprint will be managed using a kanban \cite{kanban} board with three columns: To-Do, In-Progress and Done. These sprints are heavily influenced by competences given by the project assignment. \cite{assignmentform}
 
@@ -129,7 +127,7 @@ Given the expertise of the project producer, feasibility of scope, and the yet t
   \item The project will not result in product(s) ready for commercial use.
   \item The research report will not make claims about measurement performance outside of Vietnam
 \end{itemize}
-
+\pagebreak
 \section{Interim Results}\label{interimresults}
 At the end of each sprint there will be intermediate results, these are listed as follows:
 \begin{itemize}
@@ -171,7 +169,7 @@ To find common vulnerabilities on all of the project's software repositories, a 
 As most of the software is going to be written in embedded C/C++, the latest MISRA  software development guidelines \cite{misra} are applied. CLion, the IDE used, has checks built-in to guarantee MISRA compliance. \cite{clion:misra}
 
 \subsection{Publishing}
-Documents that are ready to be reviewed by related parties will be sent via email. The project will also make use of Saxion's Research Cloud Drive to contain every major revision of software
+Documents that are ready to be reviewed by related parties will be sent via email. The project will also make use of Saxion's Research Cloud Drive \cite{saxrcd} to contain every major revision of the interim results (\ref{interimresults}). The latest version of the interim results however will always be in the git version control system.
 
 \subsection{Testing}
 As mentioned in the research sprint (\ref{sprint:research}), a descriptive, non-probabilistic research report will be written to assess the performance of the prototypes. Sensor performance will be properly tested against existing methods of measurements.
@@ -180,7 +178,7 @@ As mentioned in the research sprint (\ref{sprint:research}), a descriptive, non-
 In order to guarantee an end product that comes close to the wishes of the sponsor, all of the interim results (\ref{interimresults}) will contain regular feedback rounds. External expert advice will also be regularly requested.
 \pagebreak
 \section{Project Organization}\label{projectorganization}
-The following parties are involved with the project:\\
+The following parties are in some way involved with the project:\\
 
 \begin{tabular}{ | l | l | l | l |}
     \hline
@@ -201,14 +199,17 @@ The project supervisors are responsible for monitoring the progress on the proje
 The project advisors are responsible for giving expert advice at request regarding the technical contents of the project. They also don't have guaranteed contact hours, but it is expected that the project advisors can answer questions from the project producer within a reasonable amount of time.
 
 \subsection{Weekly Report}\label{projectorganization:weeklyreport}
-A small summary describing the progress of every week will be provided by the project producer. This summary is updated at the end of every week in the weekly report.
+A small summary describing the progress of every week will be provided by the project producer. This summary is updated at the end of every week in the weekly report, available in the Saxion Research Cloud Drive \cite{saxrcd}
 
-\section{Planning and Scheduling}
+\pagebreak
+
+\section{Planning}\label{planning}
 A planning is made to provide an overview of activities in relation of time. While this planning is not meant to be set in stone, it does provide a general overview when sprints are expected to be done.
+
 
 \begin{figure}[h]
     \center
-    \includegraphics[width=1\textwidth]{ganttdiagram.png}
+    \includegraphics[width=1.05\textwidth, angle=90]{ganttdiagram.png}
     \caption{Gantt Diagram Planning}
     \label{fig:ganttdiagram}
 \end{figure}
@@ -216,56 +217,100 @@ A planning is made to provide an overview of activities in relation of time. Whi
 The analyze sprint is expected to begin in the second half of the second week, when the project plan is finished and approved. Please note that there are 18 total weeks planned to work on the project, while there are 20 weeks of total resources planned. Two weeks (between 2/3 and 11/12) have been purposefully left out of the planning to be allocated at will. 
 
 There is room to allocate more time in July if needed.
-
+\pagebreak
 \section{Costs and Benefits}\label{costsandbenefits}
-It is important to weigh the benefits against the costs. In this section, a complete overview is given of the expected benefits and the costs. As seen, while the initial costs of purchasing equipment might seem high
+It is important to weigh the benefits against the costs. In this section, a complete overview is given of the expected benefits and the costs. A conclusion will also be drawn from these considerations.
 
-
+\subsection{Costs}
+A table is given describing the expected expenses:\\
+\begin{center}
 \begin{tabular}{ | l | l |}
+
     \hline
     \textbf{Subject} & \textbf{Costs} \\ \hline
     Professional Waterproof UAV & € 2.000 \\
-    UAV Battery & € 250 \\
-    UAV Controller & € 250 \\
+    UAV Battery & € 250,- \\
+    UAV Controller & € 250,- \\
     Various Sensors/Microcontrollers & € 300,- \\
     UAV Mounting hardware & € 100,- \\
     Proxy Shipping Service & € 100,- \\
     \hline
-\end{tabular}
+    \textbf{Total} & € 3000,- \\
+    \hline
+\end{tabular}\\
+\end{center}
 
+To take unexpected expenses into account, the total budget consists of 120\% of the expected expenses (€3600,-). Expenses across this budget need to be discussed and approved by all parties. The expenses mostly consists of parts necessary to create the water quality measurement prototypes. Some overhead is also taken into account for proxy shipping, as many online stores don't directly ship to Vietnam. The project producer will pay for his own accommodation and commute.
 
-\subsection{Qualitative Benefits}
-A few qualitative benefits are given:
+While man hours are excluded from this monetary sum as this project is an academic endeavour, they should be included as a cost. As described in the planning (\ref{planning}), 800 man hours are allocated by the project producer. Some undefined amount of man hours should also be taken into account by the rest of the parties involved in the project.
 
+\subsection{Benefits}
+A lot of areas in the world suffer from the consequences of too much ground water extraction. Intelligent surface water treatment can be a valuable asset to reduce the need for ground water extraction. A typical  challenge of surface water treatment is determining the quality of the input water. The more data you have, the better you can anticipate. The problem is that this data is hard to manually gather, especially in some remote and hard to reach locations like around the Mekong Delta. This issue around gathering water quality data spreads to more fields like water diagnostics in forensics and geographical research.
 
+A mobile surface water quality sensoring system like proposed would lead to less man hours spent manually measuring the water. It would also help reaching hard to reach places, while at the same time being faster than manually gathering data.
 
+This project would be a good foundation to such develop such a system, as well as derivations from such a system. As previously mentioned, all deliverables will be open source and free to use, even in a commercial setting. The project could lead to Saxion and Ton Duc Thang University having more related projects in the future, as well as closer connections to each other. PERNAM JSC could use this research to further develop their own intelligent surface water treatment solutions.
 
-\begin{itemize}
-  \item \subsubsection*{Benefits} the benefits are very very clear
-  \item The project must deliver every report described in project activities (\ref{interimresults}).
-  \item The project must receive adequate funding as described in costs and benefits (\ref{costsandbenefits}).
-  \item There must be accommodations to be able to test out the prototypes in the correct conditions.
-\end{itemize}
-
-
-
-Having more autonomous ways to monitor the water quality will lead to less man hours spent manually measuring the water. It will also allow for monitoring at places that aren't available yet.
-
-
+\subsection{Conclusion}
+This project is an opportunity to bring many fields together, such as UAV technology, embedded systems, and water technology. While the table might seem costly for a graduation project, it should be noted that the drone can be reused on future iterations of this project as well as other projects involving water. While the monetary value of the end prototypes is not yet known, it should be apparent that having a product that is able to measure water quality remotely is highly marketable to different fields.
 
 \section{Risks}
+Due to the nature of the project, it comes with some risks. The possible risks will be summed up in the following sections.
 
-\begin{figure}[h]
-    \center
-    \includegraphics[width=0.5\textwidth]{research-strategies.png}
-    \caption{Research strategies \cite{oates2005researching}}
-    \label{fig:research_strategies}
-\end{figure}
-
+\begin{itemize}
+    \item \textbf{The suitable parts aren't locally available}
+          \begin{itemize} 
+            \item The parts can be online ordered, the shipping time related is another risk though.
+            \item An alternative design can be used using parts that are available.
+          \end{itemize}
+    \item \textbf{Second parties are difficult to reach}
+          \begin{itemize} 
+            \item As a reactive measure, one could find alternative external parties willing to help.
+            \item As a preventative measure, one could plan a fixed moment to meet.
+          \end{itemize}
+    \item \textbf{The expectations between parties are different}
+          \begin{itemize} 
+            \item As a preventive measure, one could get the expectations straight from the beginning, and continuously check in with the related parties about the expectations. 
+          \end{itemize}
+    \item \textbf{The VISA to go to Vietnam is delayed}
+          \begin{itemize} 
+            \item The project could partially take place in the Netherlands up to the design phase, giving time until week 7 to get the VISA in order.
+            \item The project could be allocated more time in July.
+          \end{itemize}
+    \item \textbf{It won't be possible to go to Vietnam at all}
+          \begin{itemize} 
+            \item If it won't be possible to go to Vietnam for research, it won't be possible to fulfill the project boundaries.
+            \item Plans could be made to delay the project half a year
+            \item A revised graduation project could be developed to do something similar in the Netherlands.
+          \end{itemize}
+    \item \textbf{Tests can't be done because of bad weather}
+          \begin{itemize} 
+            \item Drones generally are not safe to operate during bad weather conditions.
+            \item Multiple days will need to be planned for measuring data, it should be expected to sometimes end the day with no useful data.
+            \item A drone should be selected that fares better with harsh weather conditions.
+          \end{itemize}
+    \item \textbf{The drone might break}
+          \begin{itemize} 
+            \item As a preventative measure, one should take extreme care when flying the drone and know the appropriate recovery procedures.
+            \item As a reactive measure, the operator should know how to repair the drone or the proper procedure to let it repaired.
+            \item Possible insurance and warranty should also be taken into account when purchasing the drone.
+          \end{itemize}
+    \item \textbf{There is not enough in-house skill}
+          \begin{itemize} 
+            \item It might occur that the project requires skills far outside the possibility for a student to learn in a graduation project.
+            \item As a reactive measure, one could consult external experts who are well acquainted with the project producer, such as Robor Electronics. \cite{robor}
+          \end{itemize}
+    \item \textbf{Scope Creep}
+          \begin{itemize} 
+            \item Change to the initial intended project scope may lead to extra cost or failure to deliver the end product
+            \item As a preventative measure, one should get the scope straight from the beginning.
+            \item As a reactive measure, care should be taken when it is necessary to change the scope of the project. All parties should be contacted, and there should be project-breaking argument to do change the scope of the project.
+          \end{itemize}
+\end{itemize}
+\pagebreak
 % References
 \printbibliography 
-\pagebreak
-%Remove excerpt when publishing
-
-\markdownInput{roelgrit.md}
+%Remove excerpt below when publishing
+%\pagebreak
+%\markdownInput{roelgrit.md}
 \end{document}
