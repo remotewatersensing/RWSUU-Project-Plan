@@ -5,6 +5,8 @@
 \usepackage{markdown}
 \usepackage[hidelinks]{hyperref,xcolor}
 \renewcommand\UrlFont{\color{blue}\rmfamily}
+\usepackage{nomencl}
+
 
 \usepackage[backend=biber]{biblatex}
 \addbibresource{library.bib}
@@ -19,15 +21,23 @@
 
 \makeatletter{}
 
+\makenomenclature
+\renewcommand{\nomname}{}
+
 \begin{document}
 
 \input{./title.tex}
+\input{./nomenclature.tex}
 
 \tableofcontents
 \pagebreak
+\section{Abbreviations}
+\printnomenclature
+
+\pagebreak
 
 \section{Background}
-This project proposal has been brought forward by an idea of the International Water Technology lectorate at the Saxion University of Applied Sciences. The project will be carried out in collaboration with PERNAM JSC. Ton Duc Thang University will further accommodate the project when possible by providing expert advice and practical necessities. As this project will be a first of potential following projects, emphasis is laid on developing an open source and well documented foundation so that future parties can build on this project in the future. 
+This project proposal has been brought forward by an idea of the International Water Technology research group at the Saxion University of Applied Sciences. The project will be carried out in collaboration with PERNAM JSC. Ton Duc Thang University will further accommodate the project when possible by providing expert advice and practical necessities. As this project will be a first of potential following projects, emphasis is laid on developing an open source and well documented foundation so that future parties can build on this project in the future. 
 
 Completing this project could be a start of providing smarter water sensing solutions which in turn could benefit current water filtration solutions of PERNAM as well as help with several water availability issues.
 
@@ -35,7 +45,7 @@ Completing this project could be a start of providing smarter water sensing solu
 PERNAM JSC \cite{pernam} is an engineering firm specializing in water treatment solutions in Vietnam. They are specialized in the design, engineering, and construction supervision of water treatment technologies for groundwater, surface, and brackish water. The company partially originated from the Netherlands and has close connections with Vitens, the biggest water supply company in the Netherlands. PERNAM is closely related to Howaco, the only private water supply company who is member of the South Vietnam VWSA.
 
 \subsection{Ton Duc Thang University}
-TDTU \cite{tdtu} is a public research university with the main campus in Ho Chi Minh City, Vietnam. The University offers 40 undergraduate programs, 18 master programs and 25 doctoral programs in variety of areas such as: law, applied science, technology, vocational skills, social sciences, economics, business, foreign languages and arts. 
+Ton Duc Thang University (TDTU) \cite{tdtu} is a public research university with the main campus in Ho Chi Minh City, Vietnam. The University offers 40 undergraduate programs, 18 master programs and 25 doctoral programs in variety of areas such as: law, applied science, technology, vocational skills, social sciences, economics, business, foreign languages and arts. 
 
 \subsection{Mekong Delta}
 This project will be focused around the Mekong Delta. The Mekong Delta is a network of tributaries in southwest Vietnam, between Ho Chi Minh City and Cambodia. The river itself starts in the Himalayas and passes through China, Myanmar, Thailand and Cambodia before reaching Vietnam.
@@ -57,12 +67,12 @@ The research question that the project will make an attempt to answer is as foll
 
 
 
-\large{What is the best way to build a mobile surface water quality sensoring system which can take samples in remote areas?}\vspace{3mm}\\
+\large{What is the best way to build a mobile surface water quality sensoring system that can take samples in remote areas?}\vspace{3mm}\\
 \normalsize
 To elaborate, this research question can be deconstructed as following:
 
 \subsubsection{The best way}
-The best way is dependent on a number of features that are important to the sponsor. These features naturally include accuracy, time, cost, and practicality, and will be discussed during the design sprint (\ref{sprint:design}).
+The best way is dependent on a number of features that are important to the end users of the product. These features naturally include accuracy, time, cost, and practicality, and will be discussed during the design sprint (\ref{sprint:design}).
 
 \subsubsection{Mobile}
 While there are a lot of different existing ways to measure the water quality, this project will focus solely on using unmanned aerial vehicles, as elaborated in the project boundaries (\ref{projectboundaries}).
@@ -73,7 +83,7 @@ Surface water is any body of water above ground, including streams, the ocean, r
 Water quality refers to the chemical, physical, and biological characteristics of water based on the standards of its usage. These water standards will be defined during the analyze sprint (\ref{sprint:analyze}).
 
 \subsubsection{In remote areas}
-It can be concluded that certain sensoring strategies are effective in different climates and landscape. This project will focus on water sensoring specifically in areas where PERNAM JSC are active. These areas will be defined during the analyze sprint (\ref{sprint:analyze}). The end results may also be applicable in other countries however, such as Indonesia.
+It can be concluded that certain sensoring strategies are effective in different climates and landscape. This project will focus on water sensoring specifically in areas where PERNAM JSC are active. These areas will be defined during the analyze sprint (\ref{sprint:analyze}). The end result may also be of use in other countries which face similar remote challenges however, such as Indonesia.
 
 \section{Project Activities} \label{projectactivities}
 The project will consist of several sprints. These sprints will have time boxed periods, and usually last two to four weeks. Sprints can intertwine with each other if necessary. Each sprint will be managed using a kanban \cite{kanban} board with three columns: To-Do, In-Progress and Done. These sprints are heavily influenced by competences given by the project assignment. \cite{assignmentform}
@@ -82,7 +92,7 @@ The project will consist of several sprints. These sprints will have time boxed 
 Existing water sensoring solutions and suitable drones will be analyzed. Water quality standards used will also be analyzed. Literature will be reviewed, and findings of which will be contained in a preliminary research report.  It is important to note that this document can be extended during other sprints, when new info related to the project is found. A change log as well as the git version control system \cite{git} will keep track whenever this document is edited.
 
 \subsection{Design} \label{sprint:design}
-An overview of the working architecture will be designed, along with several prototypes of ways to measure the water quality using drones. The result of which will be contained in the design report. This design report will reference a lot of findings from the preliminary research report. There will also be a lot of communication between the sponsor and the project author to discuss the focus of these designs. \\
+An overview of the working architecture will be designed, along with several prototypes of ways to measure the water quality using drones. The result of which will be contained in the design report. This design report will reference a lot of findings from the preliminary research report. There will also be a lot of communication between PERNAM and the project author to discuss the focus of these designs. \\
 
 To begin, effective variables to measure water quality will be selected. Sensors will be selected to measure these variables based on their accuracy and capability to mount on a drone. A suitable drone will be chosen using a morphological overview. Configurations of these sensors on the drone will be designed and illustrated. 
 
@@ -95,12 +105,12 @@ During this sprint, no new reports will be written. Whenever there is an issue w
 From each of these prototypes, several quantitative and qualitative features will be tested. These features include accuracy, speed, and cost. The summary of this descriptive, non-probabilistic research is written down in the final research report.
 
 \subsection{Professionalise} \label{sprint:professionalise}
-If there is time left, the most compelling prototype will be refined to a minimum viable product (MVP). \cite{mvp} This minimum viable product can be derived from one prototype or mixed together from multiple prototypes. The process will be similar to the realize sprint \ref{sprint:realise}, with the final design being added in the design report.
+If there is time left, the most compelling prototype will be refined to a minimum viable product. \cite{mvp} This MVP can be derived from one prototype or mixed together from multiple prototypes. The process will be similar to the realize sprint \ref{sprint:realise}, with the final design being added in the design report.
 
 \section{Project Boundaries} \label{projectboundaries}
 What falls within the project’s scope and what does not is frequently  unclear. Boundaries are described in order to prevent unclear situations from developing. This project will use MoSCoW prioritization to clearly define these boundaries. \cite{moscow}
 
-The project will take place from the beginning of February 2022 until the end of June 2022. When a delay occurs, the project can be extended until the end of July 2022. The maximum amount of the budget will be 1.2x the expected amount of the budget, as described in costs and benefits (\ref{costsandbenefits}). 
+The project will take place from the beginning of February 2022 until the end of June 2022. When a delay occurs, the project can be extended until the end of July 2022. The maximum amount of the budget will be 1,2x the expected amount of the budget, as described in costs and benefits (\ref{costsandbenefits}). 
 
 Given the expertise of the project producer, feasibility of scope, and the yet to be fully discovered field of UAV remote sensing, the project will focus on remote water sensing using drones.
 
@@ -118,7 +128,7 @@ Given the expertise of the project producer, feasibility of scope, and the yet t
 \end{itemize}
 \subsection{Could Have}
 \begin{itemize}
-  \item The project could deliver a minimum viable product for water quality measurement using drones.
+  \item The project could deliver a MVP for water quality measurement using drones.
   \item The prototypes could have wireless transmission to a server for automated logging.
 \end{itemize}
 \subsection{Won’t Have this time}
@@ -129,7 +139,7 @@ Given the expertise of the project producer, feasibility of scope, and the yet t
 \end{itemize}
 \pagebreak
 \section{Interim Results}\label{interimresults}
-At the end of each sprint there will be intermediate results, these are listed as follows:
+Several intermediate results are generated during the project. The final research report, prototype(s), and the minimum viable product are definitive end results, which will not be revisited later on in the project. The Preliminary research report and Design report will be revisited and updated if new information is found. All the intermediate results are listed as follows:
 \begin{itemize}
   \item Preliminary research report (see \ref{sprint:analyze})
   \item Design report (see \ref{sprint:design})
@@ -145,7 +155,7 @@ To guarantee the quality of the interim results, certain measures are taken. In 
 \subsection{Version Control Software}
 As mentioned in the analyze sprint (\ref{sprint:analyze}) the project will make use of the git version control system for it's software and reports. The main advantage of using a version control system are that multiple people can easily collaborate on a project. A VCS also stores the history of changes, making rollbacks possible. It also acts as a cloud backup.
 
-For hosting the git repositories, the project will make use of GitHub \cite{gh} because of it's ability to create organizations with multiple git repositories. The GitHub organization for this project is available at https://github.com/remotewatersensing
+For hosting the git repositories, the project will make use of GitHub \cite{gh} because of it's ability to create organizations with multiple git repositories. The GitHub organization for this project is available at https://github.com/remotewatersensing . The Saxion Research Group has requested to make the intermediate results well documented and open source.
 
 \subsection{Project Management Software}
 As the project is already making use of GitHub for version control, it makes sense to also use GitHub for other purposes. As mentioned in the project activities \ref{projectactivities}, the project will make use of kanban-style boards. These kanban-style boards are online available in GitHub as "projects" \cite{ghprojects}, and will be used to keep track of progress during sprints.
@@ -175,11 +185,12 @@ Documents that are ready to be reviewed by related parties will be sent via emai
 As mentioned in the research sprint (\ref{sprint:research}), a descriptive, non-probabilistic research report will be written to assess the performance of the prototypes. Sensor performance will be properly tested against existing methods of measurements.
 
 \subsection{Feedback}
-In order to guarantee an end product that comes close to the wishes of the sponsor, all of the interim results (\ref{interimresults}) will contain regular feedback rounds. External expert advice will also be regularly requested.
+In order to guarantee an end product that comes close to the wishes of all of the related parties, all of the interim results (\ref{interimresults}) will contain regular feedback rounds. External expert advice will also be regularly requested.
 \pagebreak
 \section{Project Organization}\label{projectorganization}
-The following parties are in some way involved with the project:\\
-
+The following people are in some way involved with the project:\\
+\begin{table}[h]
+    \centering
 \begin{tabular}{ | l | l | l | l |}
     \hline
     \textbf{Role} & \textbf{Name} & \textbf{Email} & \textbf{Telephone} \\ \hline
@@ -187,16 +198,19 @@ The following parties are in some way involved with the project:\\
     International Coach & Jan Bollen & j.w.bollen@saxion.nl & +31880191281\\
     Graduation Coach & Ronald Tangelder & r.j.w.t.tangelder@saxion.nl & +31880196347\\
     Company Advisor & Harry Futselaar & h.futselaar@saxion.nl & +31880196754\\
+    University Advisor & Abeje Mersha & a.y.mersha@saxion.nl & \\
     University Advisor & Tran Thanh Nam & tranthanhnam@tdtu.edu.vn & \\
     \hline
 \end{tabular}
+    \caption{People involved with the project}
+\end{table}
 
 \subsection{Responsibilities}
 The project producer is responsible for executing the project. Other parties are guaranteed to be able to contact the project producer on weekdays from 9:00 to 17:00. Extra attention needs to be paid because of different time regions.
 
-The project supervisors are responsible for monitoring the progress on the project. They don't have guaranteed contact hours, but regular contact between the project supervisors and the project producer are assumed.
+The coaches are responsible for monitoring the progress on the project. They don't have guaranteed contact hours, but regular contact between the project supervisors and the project producer are assumed.
 
-The project advisors are responsible for giving expert advice at request regarding the technical contents of the project. They also don't have guaranteed contact hours, but it is expected that the project advisors can answer questions from the project producer within a reasonable amount of time.
+The advisors are responsible for giving expert advice at request regarding the technical contents of the project. They also don't have guaranteed contact hours, but it is expected that the advisors can answer questions from the project producer within a reasonable amount of time.
 
 \subsection{Weekly Report}\label{projectorganization:weeklyreport}
 A small summary describing the progress of every week will be provided by the project producer. This summary is updated at the end of every week in the weekly report, available in the Saxion Research Cloud Drive \cite{saxrcd}
@@ -205,7 +219,6 @@ A small summary describing the progress of every week will be provided by the pr
 
 \section{Planning}\label{planning}
 A planning is made to provide an overview of activities in relation of time. While this planning is not meant to be set in stone, it does provide a general overview when sprints are expected to be done.
-
 
 \begin{figure}[h]
     \center
@@ -223,9 +236,9 @@ It is important to weigh the benefits against the costs. In this section, a comp
 
 \subsection{Costs}
 A table is given describing the expected expenses:\\
-\begin{center}
+\begin{table}[h]
+    \centering
 \begin{tabular}{ | l | l |}
-
     \hline
     \textbf{Subject} & \textbf{Costs} \\ \hline
     Professional Waterproof UAV & € 2.000 \\
@@ -238,6 +251,13 @@ A table is given describing the expected expenses:\\
     \textbf{Total} & € 3000,- \\
     \hline
 \end{tabular}\\
+    \caption{Costs}
+\end{table}
+
+
+
+\begin{center}
+
 \end{center}
 
 To take unexpected expenses into account, the total budget consists of 120\% of the expected expenses (€3600,-). Expenses across this budget need to be discussed and approved by all parties. The expenses mostly consists of parts necessary to create the water quality measurement prototypes. Some overhead is also taken into account for proxy shipping, as many online stores don't directly ship to Vietnam. The project producer will pay for his own accommodation and commute.
@@ -245,62 +265,63 @@ To take unexpected expenses into account, the total budget consists of 120\% of 
 While man hours are excluded from this monetary sum as this project is an academic endeavour, they should be included as a cost. As described in the planning (\ref{planning}), 800 man hours are allocated by the project producer. Some undefined amount of man hours should also be taken into account by the rest of the parties involved in the project.
 
 \subsection{Benefits}
-A lot of areas in the world suffer from the consequences of too much ground water extraction. Intelligent surface water treatment can be a valuable asset to reduce the need for ground water extraction. A typical  challenge of surface water treatment is determining the quality of the input water. The more data you have, the better you can anticipate. The problem is that this data is hard to manually gather, especially in some remote and hard to reach locations like around the Mekong Delta. This issue around gathering water quality data spreads to more fields like water diagnostics in forensics and geographical research.
+A lot of areas in the world suffer from the consequences of too much ground water extraction. Intelligent surface water treatment can be a valuable asset to reduce the need for ground water extraction. A typical challenge of surface water treatment is determining the quality of the input water. The more data you have, the better you can anticipate. The problem is that this data is hard to manually gather, especially in some remote and hard to reach locations like around the Mekong Delta. This issue around gathering water quality data spreads to more fields like water diagnostics in forensics and geographical research.
 
 A mobile surface water quality sensoring system like proposed would lead to less man hours spent manually measuring the water. It would also help reaching hard to reach places, while at the same time being faster than manually gathering data.
 
-This project would be a good foundation to such develop such a system, as well as derivations from such a system. As previously mentioned, all deliverables will be open source and free to use, even in a commercial setting. The project could lead to Saxion and Ton Duc Thang University having more related projects in the future, as well as closer connections to each other. PERNAM JSC could use this research to further develop their own intelligent surface water treatment solutions.
+This project would be a good foundation to such develop such a system, as well as derivations from such a system. As previously mentioned, all deliverables will be open source and free to use, even in a commercial setting. The project could lead to Saxion and TDTU having more related projects in the future, as well as closer connections to each other. PERNAM JSC could use this research to further develop their own intelligent surface water treatment solutions.
 
 \subsection{Conclusion}
 This project is an opportunity to bring many fields together, such as UAV technology, embedded systems, and water technology. While the table might seem costly for a graduation project, it should be noted that the drone can be reused on future iterations of this project as well as other projects involving water. While the monetary value of the end prototypes is not yet known, it should be apparent that having a product that is able to measure water quality remotely is highly marketable to different fields.
 
 \section{Risks}
-Due to the nature of the project, it comes with some risks. The possible risks will be summed up in the following sections.
+Due to the nature of the project, it comes with some risks. The possible risks will be summed up in the following sections. Each risk has been categorized as low risk, medium risk, and high risk. The risks are categorized depending on their impact and chance. A low chance high impact risk will be in the same category as a high chance low impact risk.
 
 \begin{itemize}
-    \item \textbf{The suitable parts aren't locally available}
+    \item \textbf{High Risk: The suitable parts aren't locally available}
           \begin{itemize} 
             \item The parts can be online ordered, the shipping time related is another risk though.
             \item An alternative design can be used using parts that are available.
+            \item If the project advances fast enough, it might be possible to buy necessary parts in the Netherlands and take them to Vietnam.
           \end{itemize}
-    \item \textbf{Second parties are difficult to reach}
+    \item \textbf{Low Risk: Second parties are difficult to reach}
           \begin{itemize} 
             \item As a reactive measure, one could find alternative external parties willing to help.
             \item As a preventative measure, one could plan a fixed moment to meet.
           \end{itemize}
-    \item \textbf{The expectations between parties are different}
+    \item \textbf{Low Risk: The expectations between parties are different}
           \begin{itemize} 
             \item As a preventive measure, one could get the expectations straight from the beginning, and continuously check in with the related parties about the expectations. 
           \end{itemize}
-    \item \textbf{The VISA to go to Vietnam is delayed}
+    \item \textbf{Medium Risk: The VISA to go to Vietnam is delayed}
           \begin{itemize} 
             \item The project could partially take place in the Netherlands up to the design phase, giving time until week 7 to get the VISA in order.
             \item The project could be allocated more time in July.
           \end{itemize}
-    \item \textbf{It won't be possible to go to Vietnam at all}
+    \item \textbf{Low Risk: It won't be possible to go to Vietnam at all}
           \begin{itemize} 
             \item If it won't be possible to go to Vietnam for research, it won't be possible to fulfill the project boundaries.
             \item Plans could be made to delay the project half a year
             \item A revised graduation project could be developed to do something similar in the Netherlands.
           \end{itemize}
-    \item \textbf{Tests can't be done because of bad weather}
+    \item \textbf{Low Risk: Tests can't be done because of bad weather}
           \begin{itemize} 
             \item Drones generally are not safe to operate during bad weather conditions.
             \item Multiple days will need to be planned for measuring data, it should be expected to sometimes end the day with no useful data.
             \item A drone should be selected that fares better with harsh weather conditions.
           \end{itemize}
-    \item \textbf{The drone might break}
+    \item \textbf{Medium Risk: The drone might break}
           \begin{itemize} 
             \item As a preventative measure, one should take extreme care when flying the drone and know the appropriate recovery procedures.
             \item As a reactive measure, the operator should know how to repair the drone or the proper procedure to let it repaired.
             \item Possible insurance and warranty should also be taken into account when purchasing the drone.
           \end{itemize}
-    \item \textbf{There is not enough in-house skill}
+    \item \textbf{Low Risk: There is not enough in-house skill}
           \begin{itemize} 
             \item It might occur that the project requires skills far outside the possibility for a student to learn in a graduation project.
             \item As a reactive measure, one could consult external experts who are well acquainted with the project producer, such as Robor Electronics. \cite{robor}
           \end{itemize}
-    \item \textbf{Scope Creep}
+    \item \textbf{Medium Risk: Scope Creep}
           \begin{itemize} 
             \item Change to the initial intended project scope may lead to extra cost or failure to deliver the end product
             \item As a preventative measure, one should get the scope straight from the beginning.
